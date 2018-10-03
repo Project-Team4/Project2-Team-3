@@ -27,3 +27,5 @@ function outsideClick(e){
         modal.style.display = 'none';
     }
 }
+
+

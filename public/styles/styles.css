@@ -10,6 +10,38 @@
   background: rgb(26, 188, 156);
 }
 
+nav a {
+  color: navy;
+  text-decoration: none;
+  margin-left: 15px;
+  display: inline-block;
+  border-left: 1px solid #efefef;
+  padding-left: 15px;
+  line-height: 18px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: black !important;
+}
+
+
+.navbar-toggler-icon {
+  color: coral;
+}
+.nav-link dropdown-toggle {
+  color: coral;
+}
+#navbarSupportedContent {
+  color: coral;
+  width: 20px;
+
+}
+
+.dropdown-menu {
+  color: coral;
+
+}
+
 /* .searchbutton {
   color: blue
 } */
