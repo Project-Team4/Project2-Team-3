@@ -1,7 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
     var reminders = sequelize.define("reminders", {
 
-
         User_Id: {
             type: DataTypes.INTEGER,
             allowNull: false,
