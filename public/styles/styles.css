@@ -57,7 +57,7 @@
 
  .ui-datepicker {
   display: none;
-  width: 100%;
+  width: 70%;
   /* padding: 35px; */
   cursor: default;
 
@@ -65,14 +65,14 @@
   font-family: Tahoma;
   font-size: 20px;
 
-
+/* 
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border-radius: 3px;
-
+  border-radius: 3px; */
+/* 
   -webkit-box-shadow: 0px 1px 1px rgba(255,255,255, .1), inset 0px 1px 1px rgb(0,0,0);
   -moz-box-shadow: 0px 1px 1px rgba(255,255,255, .1), inset 0px 1px 1px rgb(0,0,0);
-  box-shadow: 0px 1px 1px rgba(255,255,255, .1), inset 0px 1px 1px rgb(0,0,0);
+  box-shadow: 0px 1px 1px rgba(255,255,255, .1), inset 0px 1px 1px rgb(0,0,0); */
 }
 
 .ui-datepicker-header {
@@ -180,10 +180,13 @@
 .ui-datepicker-other-month .ui-state-default { color: #565656; }       
 
 
+.footer {
+  width:100%;
+  background-color: rgb(26, 188, 156);
+  padding: 70px 25px;
+  position: absolute;
+  top: 1170px;
 
-
-
-
-
+}
 
  
