@@ -211,14 +211,13 @@ nav a {
 
 .ui-datepicker-other-month .ui-state-default { color: #565656; }       
 
-
-.footer {
-  width:100%;
-  background-color: rgb(26, 188, 156);
-  padding: 70px 25px;
-  position: absolute;
-  top: 1170px;
-
+#modalLogin{
+  position: absolute; top:15%; left:30%;
+  width: 30%;
+  margin: 15% auto;
+  visibility: hidden;
 }
+
+
 
  

@@ -1,0 +1,71 @@
+
+  <nav class="navbar">
+    <a class="navbar-brand" href="#">Ultimate Organizer</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Log In/Register</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Organize This!
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Calendar</a>
+            <a class="dropdown-item" href="#">To Do List</a>
+            <a class="dropdown-item" href="#">Grocery List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="searchbutton">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+
+  </nav>
+
+    <div id="modalLogin">
+      <div class="formingform">
+        <div>
+          <h2>Log In</h2>
+        </div>
+        <form class="create-form">
+
+          <div class="form-group">
+            <label for="ca">username:</label>
+            <input type="text" id="ca" name="name">
+          </div>
+          <div class="form-group">
+            <label for="ca">password:</label>
+            <input type="text" id="ca" name="password">
+          </div>
+          <button id="buttonLogin" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+
+  <!-- For Calendar  -->
+  <!-- <div class="calendar"> -->
+  <div id="datepicker"></div>
+  <!-- </div> -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/calendar.js"></script>
