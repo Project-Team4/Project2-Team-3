@@ -88,23 +88,54 @@
         </footer>
         <!-- Footer -->
 
-
-    <!-- For Calendar  -->
- <!-- <div class="calendar"> -->
-    <div id="datepicker">
-        <!-- <div class="ui-datepicker td" button id="modalBtn">Create New Event</button>
-            <div id="simpleModal" class="modal">
-              <div class="modal-content">
-                <span class="closeBtn">&times;</span>
-                <p>Test</p>            
-              </div>
+<!-- For Calendar  -->
+<div class="calendar">
+  <div id="datepicker">
+      <!-- <div class="ui-datepicker td"> 
+        
+        <button id="modalBtn">Create New Event</button>
+          <div id="simpleModal" class="modal">
+            <div class="modal-content">
+              <span class="closeBtn">&times;</span>
+              <p>Test</p>            
             </div>
+          </div>
 
-          <script src="js/modal.js"></script>
-        </div> -->
+      
+      </div> -->
+      <!-- <script type='text/javascript'>
+      $(function() {
+        $("#datepicker").datepicker({ dateFormat: 'dd/mm/yy' });
+    });
+   
+    function openmodal() {
+        var $dialogContent = $("#event_edit_container");
+   
+        $dialogContent.dialog({
+           modal: true,
+           title: "Test",
+           close: function() {},
+           buttons: {
+            save : function() {},
+            cancel : function() {}
+           }
+        }).show();
+        $("#ui-datepicker-div").css("z-index", "9999");
+    }
+   </script> -->
+   
+   <div ><a href="javascript:openmodal();">Add an Event</a></div>
+   <div id="event_edit_container" >
+      <form>
+          Date: <input type="text" id="datepicker" name="datepicker">
+      </form>
+   </div>
 
-    </div>
-<!-- </div> -->
+  </div>
+</div>
+
+<script src="js/modal.js"></script>
+
 
  
 </body>

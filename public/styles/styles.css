@@ -25,17 +25,6 @@ nav a {
 }
 
 
-.navbar-toggler-icon {
-  color: coral;
-}
-.nav-link dropdown-toggle {
-  color: coral;
-}
-#navbarSupportedContent {
-  color: coral;
-  width: 20px;
-
-}
 
 .dropdown-menu {
   color: coral;
@@ -87,7 +76,6 @@ nav a {
   /* position: absolute;  */
  }  
 
-
  .ui-datepicker {
   display: none;
   width: 70%;
@@ -119,7 +107,6 @@ nav a {
   color: navy;
 }  
  
-
 
 .ui-datepicker-month {
   padding-right: 10px; 
@@ -178,9 +165,9 @@ nav a {
 .ui-datepicker-prev {
   text-indent: -9999px;
   width: 0;
-	height: 0;
-	border-top: 10px solid transparent;
-	border-right: 10px solid gray;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid gray;
   border-bottom: 10px solid transparent;
   left: 400px;
   margin-top: 42px;
@@ -210,6 +197,18 @@ nav a {
 }
 
 .ui-datepicker-other-month .ui-state-default { color: #565656; }       
+
+.footer {
+  width:100%;
+  background-color: rgb(26, 188, 156);
+  padding: 70px 25px;
+  position: absolute;
+  top: 1170px;
+
+}
+
+
+
 
 #modalLogin{
   position: absolute; top:15%; left:30%;
