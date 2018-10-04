@@ -1,29 +1,31 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": {
-      "user": {
-          "path": "user_db"
-      },
-      "main": {
-          "path": "main_db"
-      }
-    },
- 
-    "host": "localhost",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "testdb",
+    "password": "DokSql1793$",
+    "database": "main_db",
     "host": "localhost",
     "dialect": "mysql",
-    "logging": false
+    "define": {
+      "timestamps": false
+   }
+  },
+
+  "test": {
+    "username": "root",
+    "password": "DokSql1793$",
+    "database": "main_db",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false,
+    "define": {
+      "timestamps": false
+   }
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql"
+    "use_env_variable": "mysql://b4a286c3458b06:fe0aa92a@us-cdbr-iron-east-01.cleardb.net/heroku_bc7dd7cf5f39305?reconnect=true",
+    "dialect": "mysql",
+    "define": {
+      "timestamps": false
+   }
   }
 }
