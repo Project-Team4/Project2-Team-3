@@ -63,12 +63,14 @@ function openmodal() {
     var eventObject = {
         type: type,
         name: name,
-        start_date: startDate,
+        start_date: dateInput,
         info: info,
-        location: location
-    } ;
-    
-    $.post("/api/calendar", eventObject, function() {
+        location: location,
+        userid: 1
+    };
+    console.log(eventObject);
+
+    $.post("/api/calendars", eventObject, function() {
       console.log('record sent')
     });
 

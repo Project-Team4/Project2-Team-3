@@ -1,5 +1,10 @@
 module.exports = function (sequelize, DataTypes) {
+<<<<<<< Updated upstream
     var Calendars = sequelize.define("calendars", {
+=======
+    
+    var calendars = sequelize.define("calendars", {
+>>>>>>> Stashed changes
         User_Id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -22,7 +27,21 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1, 10]
             }
         },
-        Info: {
+        Event_Start_Time: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1, 10]
+            }
+        },
+        Event_End_Time: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1, 10]
+            }
+        },
+        Event_Info: {
             type: DataTypes.TEXT,
             allowNull: false,
             validate: {

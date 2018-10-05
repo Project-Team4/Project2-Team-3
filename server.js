@@ -9,7 +9,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
@@ -23,9 +23,7 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-app.use('/', require('./controllers/htmlRoutes.js'));
-app.use('/', require('./controllers/apiRoutes.js'))
-app.use('/', require('./controllers'));
+require('./controllers/calendarsController.js')(app);
 
 var syncOptions = { force: false };
 

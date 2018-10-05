@@ -3,40 +3,45 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
-var calendar = require("../models/calendars.js");
+var db = require("../models");
 
+module.exports = function(app) {
 // Create all our routes and set up logic within those routes where required.
-router.get("/", function(req, res) {
-  calendar.selectAll(function(data) {
-    var hbsObject = {
-      calendars: data
-    };
-    console.log(hbsObject);
-    res.render("index", hbsObject);
-  });
+app.get("/", function(req, res) {
+
+    res.render("index");
+
 });
 
-router.post("/api/calendar", function(req, res) {
-  console.log("inside post on server side");
-  calendar.insertOne([
-    "Event_Type",
-    "Event_Name",
-    "Event_Start_Date",
-    "Event_Info",
-    "Event_Location"
-  ], [
-    req.body.type,
-    req.body.name,
-    req.body.start_date,
-    req.body.info,
-    req.body.location
-  ], function(result) {
+app.get("/calendars", function(req, res) {
+  res.render("calendar");
+  // calendar.selectAll(function(data) {
+  //   var hbsObject = {
+  //     calendars: data
+  //   };
+  //   console.log(hbsObject);
+  //   res.render("calendar", hbsObject);
+  // });
+});
+
+app.post("/api/calendars", function(req, res) {
+  console.log(req.body);
+  db.calendars.create(
+    {
+    Event_Type: req.body.type,
+    Event_Name: req.body.name,
+    Event_Start_Date: req.body.start_date,
+    Event_Info: req.body.info,
+    Event_Location: req.body.location,
+    User_Id: req.body.userid
+    })
+    .then(function(result) {
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    res.json(result);  //{ id: result.insertId }
   });
 });
 
-router.put("/api/calendar/:id", function(req, res) {
+app.put("/api/calendars/:id", function(req, res) {
   var condition = "id = " + req.params.id;  console.log("condition", condition);
   calendar.updateOne({
     Event_Start_Date: req.body.newStartDate
@@ -50,7 +55,7 @@ router.put("/api/calendar/:id", function(req, res) {
   });
 });
 
-router.delete("/api/calendar/:id", function(req, res) {
+app.delete("/api/calendar/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   calendar.deleteOne(condition, function(result) {
@@ -65,5 +70,4 @@ router.delete("/api/calendar/:id", function(req, res) {
 
 });
 
-// Export routes for server.js to use.
-module.exports = router;
+}
