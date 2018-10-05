@@ -4,7 +4,7 @@ module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
     db.calendars.findAll({}).then(function(dbCalendars) {
-      res.render("calendar", {
+      res.render("index", {
         calendars: dbCalendars
       });
     });
