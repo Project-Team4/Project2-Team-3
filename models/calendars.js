@@ -1,4 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
+    var orm = require("../config/orm.js");
+    
     var calendars = sequelize.define("calendars", {
         User_Id: {
             type: DataTypes.INTEGER,
