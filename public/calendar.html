@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ultimate Organizer</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles.css">
+  
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+</head>
+
+
+<body> 
+    
+        <nav class="navbar">
+                <a class="navbar-brand" href="#">Ultimate Organizer</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                
+
+                    <header id="masthead">
+                        <div class="container">
+                            <a href="calendar.html"></a>
+                                <nav>
+                                    <a href="login.html">Log In</a>
+                                    <a href="createaccount.html">Register</a>  
+                                </nav>
+                        </div>  
+                    </header>
+
+
+                </div>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Log In/Register</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Organize This!
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Calendar</a>
+                        <a class="dropdown-item" href="#">To Do List</a>
+                        <a class="dropdown-item" href="#">Grocery List</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                  </ul>
+                  <form class="searchbutton">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>   
+        </nav>
+
+
+
+        <!-- Footer -->
+        <footer class="footer">
+
+        <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2018 Copyright
+                <a href="https://mdbootstrap.com/bootstrap-tutorial/"></a>
+            </div>
+      
+        </footer>
+        <!-- Footer -->
+
+<!-- For Calendar  -->
+<div class="calendar">
+  <div id="datepicker">
+      <!-- <div class="ui-datepicker td"> 
+        
+        <button id="modalBtn">Create New Event</button>
+          <div id="simpleModal" class="modal">
+            <div class="modal-content">
+              <span class="closeBtn">&times;</span>
+              <p>Test</p>            
+            </div>
+          </div>
+
+      
+      </div> -->
+      <!-- <script type='text/javascript'>
+      $(function() {
+        $("#datepicker").datepicker({ dateFormat: 'dd/mm/yy' });
+    });
+   
+    function openmodal() {
+        var $dialogContent = $("#event_edit_container");
+   
+        $dialogContent.dialog({
+           modal: true,
+           title: "Test",
+           close: function() {},
+           buttons: {
+            save : function() {},
+            cancel : function() {}
+           }
+        }).show();
+        $("#ui-datepicker-div").css("z-index", "9999");
+    }
+   </script> -->
+   
+   <div ><a href="javascript:openmodal();">Add an Event</a></div>
+   <div id="event_edit_container" >
+      <form>
+          Date: <input type="text" id="datepicker" name="datepicker">
+          type: <input type="text" id="type" name="type">
+          name: <input type="text" id="name" name="name">
+          start date: <input type="text" id="start date" name="start date">
+          info: <input type="text" id="info" name="info">
+          location: <input type="text" id="location" name="location">
+          Event Type: Birthday, Appointment, Hobby, Social, School, Work
+          Event Type, Event Name, Date Start, Date End, Event Start Time, Event End Time, Event Location
+         
+      
+      
+   
+      
+      
+      </form>
+   </div>
+
+  </div>
+</div>
+
+ <script src="js/modal.js"></script>
+
+
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
