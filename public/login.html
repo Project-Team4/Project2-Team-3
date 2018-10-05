@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Page Title</title>
+    <title>Log In</title>
     <!--CSS-->
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
@@ -42,17 +42,21 @@
     </header>
     <div id="validation-errors"></div>
 
-    <h2 id="create-account-title">Login</h2>
+   
 
     <form id="account-form">
             <div id="accountform">
             <div class="form-group">
+              <div id="modalLogin">
+
+                  <h2 id="create-account-title">Login</h2>
+
               <label for="exampleInputEmail1">E-mail</label>
               <div id="font">
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
               <small id="emailHelp" class="form-text text-muted"></small>
               </div>
-            </div>
+           
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
               <div id="font">
@@ -61,6 +65,7 @@
               </div>
             <button id="submit" type="submit" class="btn btn-primary">Submit</button>
             </div>
+          </div>
           </form>
 
 
