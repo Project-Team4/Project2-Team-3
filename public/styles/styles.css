@@ -180,10 +180,10 @@
 .ui-datepicker-other-month .ui-state-default { color: #565656; }       
 
 #modalLogin{
-  position: absolute; top:15%; left:30%;
+  position: absolute; top:2%; left:25%;
   width: 30%;
   margin: 15% auto;
-  visibility: hidden;
+  visibility: visible;
 }
 
 

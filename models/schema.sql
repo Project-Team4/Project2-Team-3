@@ -102,6 +102,13 @@ CREATE TABLE calendars
 --     PRIMARY KEY(id)
 -- );
 
+-- CREATE TABLE event_types
+-- (
+--     id INT AUTO_INCREMENT NOT NULL,
+--     Type_Name VARCHAR(50)
+--     PRIMARY KEY(id)
+-- );
+
 -- CREATE TABLE reminders
 -- (
 --     id INT AUTO_INCREMENT NOT NULL,

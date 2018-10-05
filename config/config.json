@@ -22,7 +22,10 @@
    }
   },
   "production": {
-    "use_env_variable": "mysql://b4a286c3458b06:fe0aa92a@us-cdbr-iron-east-01.cleardb.net/heroku_bc7dd7cf5f39305?reconnect=true",
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "define": {
       "timestamps": false

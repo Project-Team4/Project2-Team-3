@@ -1,4 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
+    var orm = require("../config/orm.js");
+
     var attendees = sequelize.define("attendees", {
         User_Id: {
             type: DataTypes.INTEGER,
