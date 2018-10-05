@@ -7,6 +7,13 @@ module.exports = function(app) {
       res.json(dbExamples);
     });
   });
+  
+    // Get one from users_db
+    app.get("/api/login", function(req, res) {
+      db.users.findAll({}).then(function(recordSet) {
+        res.json(recordSet);
+      });
+    });
 
   // Create a new example
   app.post("/api/examples", function(req, res) {

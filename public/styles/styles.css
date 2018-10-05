@@ -10,6 +10,27 @@
   background: rgb(26, 188, 156);
 }
 
+nav a {
+  color: navy;
+  text-decoration: none;
+  margin-left: 15px;
+  display: inline-block;
+  border-left: 1px solid #efefef;
+  padding-left: 15px;
+  line-height: 18px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: black !important;
+}
+
+
+
+.dropdown-menu {
+  color: coral;
+
+}
+
 /* .searchbutton {
   color: blue
 } */
@@ -55,7 +76,6 @@
   /* position: absolute;  */
  }  
 
-
  .ui-datepicker {
   display: none;
   width: 70%;
@@ -87,7 +107,6 @@
   color: navy;
 }  
  
-
 
 .ui-datepicker-month {
   padding-right: 10px; 
@@ -146,9 +165,9 @@
 .ui-datepicker-prev {
   text-indent: -9999px;
   width: 0;
-	height: 0;
-	border-top: 10px solid transparent;
-	border-right: 10px solid gray;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid gray;
   border-bottom: 10px solid transparent;
   left: 400px;
   margin-top: 42px;
@@ -179,7 +198,6 @@
 
 .ui-datepicker-other-month .ui-state-default { color: #565656; }       
 
-
 .footer {
   width:100%;
   background-color: rgb(26, 188, 156);
@@ -188,5 +206,17 @@
   top: 1170px;
 
 }
+
+
+
+
+#modalLogin{
+  position: absolute; top:2%; left:25%;
+  width: 30%;
+  margin: 15% auto;
+  visibility: visible;
+}
+
+
 
  

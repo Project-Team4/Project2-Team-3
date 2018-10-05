@@ -28,7 +28,20 @@
                   <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="#"> Log In/Register</div>
+                
+
+                    <header id="masthead">
+                        <div class="container">
+                            <a href="calendar.html"></a>
+                                <nav>
+                                    <a href="login.html">Log In</a>
+                                    <a href="createaccount.html">Register</a>  
+                                </nav>
+                        </div>  
+                    </header>
+
+
+                </div>
               
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
@@ -75,11 +88,67 @@
         </footer>
         <!-- Footer -->
 
+<!-- For Calendar  -->
+<div class="calendar">
+  <div id="datepicker">
+      <!-- <div class="ui-datepicker td"> 
+        
+        <button id="modalBtn">Create New Event</button>
+          <div id="simpleModal" class="modal">
+            <div class="modal-content">
+              <span class="closeBtn">&times;</span>
+              <p>Test</p>            
+            </div>
+          </div>
 
-    <!-- For Calendar  -->
- <!-- <div class="calendar"> -->
-    <div id="datepicker"></div>
-<!-- </div> -->
+      
+      </div> -->
+      <!-- <script type='text/javascript'>
+      $(function() {
+        $("#datepicker").datepicker({ dateFormat: 'dd/mm/yy' });
+    });
+   
+    function openmodal() {
+        var $dialogContent = $("#event_edit_container");
+   
+        $dialogContent.dialog({
+           modal: true,
+           title: "Test",
+           close: function() {},
+           buttons: {
+            save : function() {},
+            cancel : function() {}
+           }
+        }).show();
+        $("#ui-datepicker-div").css("z-index", "9999");
+    }
+   </script> -->
+   
+   <div ><a href="javascript:openmodal();">Add an Event</a></div>
+   <div id="event_edit_container" >
+      <form>
+          Date: <input type="text" id="datepicker" name="datepicker">
+          type: <input type="text" id="type" name="type">
+          name: <input type="text" id="name" name="name">
+          start date: <input type="text" id="start date" name="start date">
+          info: <input type="text" id="info" name="info">
+          location: <input type="text" id="location" name="location">
+          Event Type: Birthday, Appointment, Hobby, Social, School, Work
+          Event Type, Event Name, Date Start, Date End, Event Start Time, Event End Time, Event Location
+         
+      
+      
+   
+      
+      
+      </form>
+   </div>
+
+  </div>
+</div>
+
+ <script src="js/modal.js"></script>
+
 
  
 </body>
