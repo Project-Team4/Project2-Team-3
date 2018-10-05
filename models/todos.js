@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var todos = sequelize.define("todos", {
+    var Todos = sequelize.define("todos", {
 
         User_Id: {
             type: DataTypes.INTEGER,
@@ -64,6 +64,15 @@ module.exports = function (sequelize, DataTypes) {
             }
         }
     });
-    return todos;
+
+    Todos.associate = function(models) {
+        Todos.belongsTo(models.Users, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+
+    return Todos;
 
 };

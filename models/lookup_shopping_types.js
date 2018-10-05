@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var lookup_shopping_types = sequelize.define("lookup_shopping_types", {
+    var LookupShoppingTypes = sequelize.define("lookup_shopping_types", {
         Type_Name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -8,5 +8,13 @@ module.exports = function (sequelize, DataTypes) {
             }
         }
     });
-    return lookup_shopping_types;
+    LookupShoppingTypes.associate = function(models) {
+        LookupShoppingTypes.belongsTo(models.Users, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+
+    return LookupShoppingTypes;
 };
