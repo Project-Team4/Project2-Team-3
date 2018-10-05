@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  var users = sequelize.define("users", {
+  var Users = sequelize.define("users", {
     User_Id: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -38,5 +38,12 @@ module.exports = function (sequelize, DataTypes) {
     }
 
   });
-  return users;
+
+Users.associate = function(models) {
+  Users.hasMany(models.RepeatingTodos, {
+    onDelete: "cascade"
+  });
+};
+
+  return Users;
 };

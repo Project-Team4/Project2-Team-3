@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var repeating_todos = sequelize.define("repeating_todos", {
+    var RepeatingTodos = sequelize.define("repeating_todos", {
 
         Repeat_Freq: {
             type: DataTypes.INTEGER,
@@ -48,5 +48,13 @@ module.exports = function (sequelize, DataTypes) {
             }
         }
     });
-    return repeating_todos;
+
+    RepeatingTodos.associate = function(models) {
+        RepeatingTodos.belongsTo(models.Users, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+    return RepeatingTodos;
 };

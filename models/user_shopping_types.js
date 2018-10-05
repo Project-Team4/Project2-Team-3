@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var user_shopping_types = sequelize.define("user_shopping_types", {
+    var UserShoppingTypes = sequelize.define("user_shopping_types", {
         User_Id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -9,5 +9,14 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
         }
     });
-    return user_shopping_types;
+
+    UserShoppingTypes.associate = function(models) {
+        UserShoppingTypes.belongsTo(models.Users, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+
+    return UserShoppingTypes;
 };

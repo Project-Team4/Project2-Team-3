@@ -1,7 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var orm = require("../config/orm.js");
-
-    var attendees = sequelize.define("attendees", {
+    var Attendees = sequelize.define("attendees", {
         User_Id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -21,5 +19,14 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
         }
     });
-    return attendees;
+
+    Attendees.associate = function(models) {
+        Attendees.belongsTo(models.Calendar, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+
+    return Attendees;
 };
