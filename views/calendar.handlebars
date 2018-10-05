@@ -1,71 +1,143 @@
+    
+        <nav class="navbar">
+                <a class="navbar-brand" href="#">Ultimate Organizer</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
 
-  <nav class="navbar">
-    <a class="navbar-brand" href="#">Ultimate Organizer</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+                
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Log In/Register</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Organize This!
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Calendar</a>
-            <a class="dropdown-item" href="#">To Do List</a>
-            <a class="dropdown-item" href="#">Grocery List</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+                    <header id="masthead">
+                        <div class="container">
+                            <a href="calendar.html"></a>
+                                <nav>
+                                  <a href="/api/calendar">All Events List</a>
+                                    <a href="login.html">Log In</a>
+                                    <a href="createaccount.html">Register</a>  
+                                </nav>
+                        </div>  
+                    </header>
+
+
+                </div>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Log In/Register</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Organize This!
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Calendar</a>
+                        <a class="dropdown-item" href="#">To Do List</a>
+                        <a class="dropdown-item" href="#">Grocery List</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                  </ul>
+                  <form class="searchbutton">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>   
+        </nav>
+
+
+
+        <!-- Footer -->
+        <footer class="footer">
+
+        <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2018 Copyright
+                <a href="https://mdbootstrap.com/bootstrap-tutorial/"></a>
+            </div>
+      
+        </footer>
+        <!-- Footer -->
+
+<!-- For Calendar  -->
+<div class="calendar">
+  <div id="datepicker">
+      <!-- <div class="ui-datepicker td"> 
+        
+        <button id="modalBtn">Create New Event</button>
+          <div id="simpleModal" class="modal">
+            <div class="modal-content">
+              <span class="closeBtn">&times;</span>
+              <p>Test</p>            
+            </div>
           </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <form class="searchbutton">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+      
+      </div> -->
+      <!-- <script type='text/javascript'>
+      $(function() {
+        $("#datepicker").datepicker({ dateFormat: 'dd/mm/yy' });
+    });
+   
+    function openmodal() {
+        var $dialogContent = $("#event_edit_container");
+   
+        $dialogContent.dialog({
+           modal: true,
+           title: "Test",
+           close: function() {},
+           buttons: {
+            save : function() {},
+            cancel : function() {}
+           }
+        }).show();
+        $("#ui-datepicker-div").css("z-index", "9999");
+    }
+   </script> -->
+   
+   <div><a href="javascript:openmodal();">Add an Event</a></div>
+   <div id="event_edit_container" class="eventCreator">
+      <form>
+        <table>
+          <tr>
+          <th style="text-align: left;">Date:</th>
+          <td style="text-align: left;"><input type="text" id="datepicker" name="datepicker"></td>
+          </tr>
+          <tr>
+          <th style="text-align: left:">Type:</th>
+          <td style="text-align: left;">
+            <select id="type" name="type">
+            <option value=0 SELECTED>-event type-</option>
+            <option value=1>Birthday</option>
+            <option value=2>Appointment</option>
+            <option value=3>Hobby</option>
+            <option value=4>Social</option>
+            <option value=5>School Work</option>
+            </select>
+          </td>
+          </tr>
+          <tr>
+          <th style="text-align: left:">Name:</th>
+          <td style="text-align: left;"><input type="text" id="name" name="name"></td>
+          </tr>
+          <tr>
+          <th style="text-align: left:">Info:</th>
+          <td style="text-align: left;"><input type="text" id="info" name="info"></td>
+          </tr>
+          <th style="text-align: left:">Location:</th>
+          <td style="text-align: left;"><input type="text" id="location" name="location"></td>
+          </tr>
+          </table>
       </form>
-    </div>
-  </nav>
+   </div>
 
+  </div>
+</div>
 
-  </nav>
-
-    <div id="modalLogin">
-      <div class="formingform">
-        <div>
-          <h2>Log In</h2>
-        </div>
-        <form class="create-form">
-
-          <div class="form-group">
-            <label for="ca">username:</label>
-            <input type="text" id="ca" name="name">
-          </div>
-          <div class="form-group">
-            <label for="ca">password:</label>
-            <input type="text" id="ca" name="password">
-          </div>
-          <button id="buttonLogin" type="submit">Login</button>
-        </form>
-      </div>
-    </div>
-
-
-  <!-- For Calendar  -->
-  <!-- <div class="calendar"> -->
-  <div id="datepicker"></div>
-  <!-- </div> -->
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/calendar.js"></script>

@@ -8,13 +8,6 @@ module.exports = function (sequelize, DataTypes) {
             }
         }
     });
-    LookupShoppingTypes.associate = function(models) {
-        LookupShoppingTypes.belongsTo(models.Users, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    };
 
     return LookupShoppingTypes;
 };

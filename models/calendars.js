@@ -1,13 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
     var Calendars = sequelize.define("calendars", {
-        User_Id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        Event_Type: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-        },
         Event_Name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -22,7 +14,7 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1, 10]
             }
         },
-        Info: {
+        Event_Info: {
             type: DataTypes.TEXT,
             allowNull: false,
             validate: {
@@ -37,14 +29,17 @@ module.exports = function (sequelize, DataTypes) {
             }
         }
     });
-
-    Calendars.associate = function(models) {
-        Calendars.belongsTo(models.Users, {
+    Calendars.associate = function (models) {
+        Calendars.belongsTo(models.users, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+        Calendars.belongsTo(models.event_types, {
             foreignKey: {
                 allowNull: false
             }
         });
     };
-
     return Calendars;
 };
