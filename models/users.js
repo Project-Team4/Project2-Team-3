@@ -7,13 +7,6 @@ module.exports = function (sequelize, DataTypes) {
         len: [1, 40]
       }
     },
-    Pass_Word: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 40]
-      }
-    },
     Email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -28,22 +21,12 @@ module.exports = function (sequelize, DataTypes) {
         len: [1, 14]
       }
     },
-    Verified: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
-    },
     Active: {
       type: DataTypes.BOOLEAN,
       defaultValue: true,
     }
 
   });
-
-Users.associate = function(models) {
-  Users.hasMany(models.RepeatingTodos, {
-    onDelete: "cascade"
-  });
-};
 
   return Users;
 };

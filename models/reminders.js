@@ -21,12 +21,6 @@ module.exports = function (sequelize, DataTypes) {
             }
         }
     });
-    Reminders.associate = function(models) {
-        Reminders.belongsTo(models.Users, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    };
+
     return Reminders;
 };

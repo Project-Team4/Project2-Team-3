@@ -11,6 +11,7 @@
                         <div class="container">
                             <a href="calendar.html"></a>
                                 <nav>
+                                  <a href="/api/calendar">All Events List</a>
                                     <a href="login.html">Log In</a>
                                     <a href="createaccount.html">Register</a>  
                                 </nav>
@@ -101,22 +102,39 @@
     }
    </script> -->
    
-   <div ><a href="javascript:openmodal();">Add an Event</a></div>
-   <div id="event_edit_container" >
+   <div><a href="javascript:openmodal();">Add an Event</a></div>
+   <div id="event_edit_container" class="eventCreator">
       <form>
-          Date: <input type="text" id="datepicker" name="datepicker">
-          type: <input type="text" id="type" name="type">
-          name: <input type="text" id="name" name="name">
-          info: <input type="text" id="info" name="info">
-          location: <input type="text" id="location" name="location">
-          Event Type: Birthday, Appointment, Hobby, Social, School, Work
-          Event Type, Event Name, Date Start, Date End, Event Start Time, Event End Time, Event Location
-         
-      
-      
-   
-      
-      
+        <table>
+          <tr>
+          <th style="text-align: left;">Date:</th>
+          <td style="text-align: left;"><input type="text" id="datepicker" name="datepicker"></td>
+          </tr>
+          <tr>
+          <th style="text-align: left:">Type:</th>
+          <td style="text-align: left;">
+            <select id="type" name="type">
+            <option value=0 SELECTED>-event type-</option>
+            <option value=1>Birthday</option>
+            <option value=2>Appointment</option>
+            <option value=3>Hobby</option>
+            <option value=4>Social</option>
+            <option value=5>School Work</option>
+            </select>
+          </td>
+          </tr>
+          <tr>
+          <th style="text-align: left:">Name:</th>
+          <td style="text-align: left;"><input type="text" id="name" name="name"></td>
+          </tr>
+          <tr>
+          <th style="text-align: left:">Info:</th>
+          <td style="text-align: left;"><input type="text" id="info" name="info"></td>
+          </tr>
+          <th style="text-align: left:">Location:</th>
+          <td style="text-align: left;"><input type="text" id="location" name="location"></td>
+          </tr>
+          </table>
       </form>
    </div>
 

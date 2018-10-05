@@ -13,31 +13,39 @@ app.get("/", function(req, res) {
 
 });
 
+app.get("/api/calendar", function(req, res) {
+  db.calendars.findAll({})
+  .then(function(result) {
+    res.json(result);
+  });
+});
+
+
 app.get("/calendars", function(req, res) {
-  res.render("calendar");
-  // calendar.selectAll(function(data) {
-  //   var hbsObject = {
-  //     calendars: data
-  //   };
-  //   console.log(hbsObject);
-  //   res.render("calendar", hbsObject);
-  // });
+  //res.render("calendar");
+  db.calendars.findAll({})
+  .then(function(result) {
+    var hbsObject = {
+      calendars: result
+    };
+    res.render("calendar", hbsObject);
+  });
 });
 
 app.post("/api/calendars", function(req, res) {
-  console.log(req.body);
+  //console.log(req.body);
   db.calendars.create(
     {
-    Event_Type: req.body.type,
+    eventTypeId: req.body.type,
     Event_Name: req.body.name,
-    Event_Start_Date: req.body.start_date,
+    Start_Date: req.body.start_date,
     Event_Info: req.body.info,
-    Event_Location: req.body.location,
-    User_Id: req.body.userid
+    Location: req.body.location,
+    userId: req.body.userid
     })
     .then(function(result) {
     // Send back the ID of the new quote
-    res.json(result);  //{ id: result.insertId }
+    res.json({ id: result.insertId });
   });
 });
 
