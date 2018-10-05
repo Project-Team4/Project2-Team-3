@@ -1,14 +1,8 @@
 module.exports = function (sequelize, DataTypes) {
-    var orm = require("../config/orm.js");
-    
-    var calendars = sequelize.define("calendars", {
+    var Calendars = sequelize.define("calendars", {
         User_Id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-        },
-        Repeat_Key: {
-            type: DataTypes.INTEGER,
-            defaultValue: 0,
         },
         Event_Type: {
             type: DataTypes.INTEGER,
@@ -21,42 +15,21 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1, 40]
             }
         },
-        Event_Start_Date: {
+        Start_Date: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1, 10]
             }
         },
-        Event_End_Date: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1, 10]
-            }
-        },
-        Event_Start_Time: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1, 10]
-            }
-        },
-        Event_End_Time: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1, 10]
-            }
-        },
-        Event_Info: {
+        Info: {
             type: DataTypes.TEXT,
             allowNull: false,
             validate: {
                 len: [1, 140]
             }
         },
-        Event_Location: {
+        Location: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -64,5 +37,14 @@ module.exports = function (sequelize, DataTypes) {
             }
         }
     });
-    return calendars;
+
+    Calendars.associate = function(models) {
+        Calendars.belongsTo(models.Users, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+
+    return Calendars;
 };

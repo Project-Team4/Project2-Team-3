@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var reminders = sequelize.define("reminders", {
+    var Reminders = sequelize.define("reminders", {
 
         User_Id: {
             type: DataTypes.INTEGER,
@@ -21,5 +21,12 @@ module.exports = function (sequelize, DataTypes) {
             }
         }
     });
-    return reminders;
+    Reminders.associate = function(models) {
+        Reminders.belongsTo(models.Users, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+    return Reminders;
 };
