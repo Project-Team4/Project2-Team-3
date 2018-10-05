@@ -39,11 +39,45 @@ function openmodal() {
     $dialogContent.dialog({
        modal: true,
        title: "Test",
-       close: function() {},
-       buttons: {
-        save : function() {},
-        cancel : function() {}
-       }
+    //    close: function() {
+    //        console.log('close')
+    //    },
+    buttons: {
+        "Save": function() {
+    //    Ajax POST requests to /api/calendar
+  
+    // req.body.type,
+    // req.body.name,
+    // req.body.start_date,
+    // req.body.end_date,
+    // Get value of date input
+    var dateInput = $('#datepicker').val()
+    console.log(dateInput)
+    var type = $('#type').val()
+    var name = $('#name').val()
+    var startDate = $('#startDate').val()
+    var info =$('#info').val()
+    var location= $('#location').val()
+
+    var eventObject = {
+        type: type,
+        name: name,
+        start_date: startDate,
+        info: info,
+        location: location
+    } ;
+    
+    $.post("/api/calendar", eventObject, function() {
+      console.log('record sent')
+    });
+
+        },
+        
+
+        Cancel: function() {
+          $( this ).dialog( "close" );
+        }
+      }
     }).show();
     $("#ui-datepicker-div").css("z-index", "9999");
 }
