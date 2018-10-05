@@ -8,7 +8,7 @@ function openmodal() {
 
     $dialogContent.dialog({
         modal: true,
-        title: "Test",
+        title: "Add This To My Calendar",
         buttons: {
             "Save": function () {
                 //    Ajax POST requests to /api/calendar
