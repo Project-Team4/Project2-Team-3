@@ -58,6 +58,7 @@ function openmodal() {
     var startDate = $('#startDate').val()
     var info =$('#info').val()
     var location= $('#location').val()
+    
 
     var eventObject = {
         type: type,
