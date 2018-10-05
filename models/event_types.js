@@ -1,5 +1,4 @@
 module.exports = function (sequelize, DataTypes) {
-<<<<<<< HEAD
     var EventTypes = sequelize.define("event_types", {
 
         User_Id: {
@@ -24,7 +23,6 @@ module.exports = function (sequelize, DataTypes) {
     };
 
     return EventTypes;
-=======
     var event_types = sequelize.define("event_types", {
         Type_Name: {
             type: DataTypes.STRING,
@@ -32,5 +30,4 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
     return event_types;
->>>>>>> 3e8fb1c45f52a3ddc08e07fadebffd0789e5b4d5
 };
