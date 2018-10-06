@@ -3,9 +3,13 @@ Personal calendar, to-do list and shopping list
 
 # Live Link
 (click image)<br>
-<a href="https://github.com/Project-Team4/Project2-Team-3.git">
+<a href="https://testprojecttwo.herokuapp.com/">
     <img src="public/assets/images/organizerLogoWide.png">
 </a>
+
+#GITS
+<a href="https://github.com/Project-Team4/Project2-Team-3.git">-github</a>
+<a href="https://git.heroku.com/testprojecttwo.git">-heroku</a>
 
 # Requirements
 - Node js app using an Express-Handlebars server
