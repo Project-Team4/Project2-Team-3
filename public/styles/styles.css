@@ -1,6 +1,11 @@
 /* .list-group-item {
   line-height: 2.5;
-}
+} */
+ 
+body {
+  
+    min-width: 250px;
+  } 
 
 /* Nav Bar */
 .navbar {
