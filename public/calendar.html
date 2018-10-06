@@ -21,7 +21,7 @@
 <body> 
       
         <nav class="navbar navbar-expand-md navbar-dark">
-            <a class="navbar-brand" href="#">Ultimate Organizer</a>
+            <a class="navbar-brand" href="calendar.html">Ultimate Organizer</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,7 +31,7 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="calendar.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="login.html">Log In</a>
@@ -63,13 +63,13 @@
   <div id="datepicker">
    <div ><a href="javascript:openmodal();">Add an Event</a></div>
    <div id="event_edit_container" >
-      <form>
-          Date: <input type="text" id="datepicker" name="datepicker">
-          type: <input type="text" id="type" name="type">
-          name: <input type="text" id="name" name="name">
-          start date: <input type="text" id="start date" name="start date">
-          info: <input type="text" id="info" name="info">
-          location: <input type="text" id="location" name="location">     
+      <form id="form">
+          <input type="text" id="datepicker" name="datepicker"> Date:
+          <input type="text" id="type" name="type">  Type: 
+          <input type="text" id="name" name="name"> Name:
+          <input type="text" id="start date" name="start date"> Start Date: 
+          <input type="text" id="info" name="info"> Info: 
+          <input type="text" id="location" name="location"> Location:    
       </form>
    </div>
 
