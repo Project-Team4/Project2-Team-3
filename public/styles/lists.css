@@ -118,3 +118,9 @@ body {
   .addBtn:hover {
     background-color: #bbb;
   }
+
+  #masthead {
+    color: rgb(26, 188, 156);
+    background-color: coral;
+
+  }
